@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "pdf-converter": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/server.js"
+      ]
+    }
+  }
+}
