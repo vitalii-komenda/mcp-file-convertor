@@ -1,11 +1,6 @@
 # MCP PDF to PNG Converter
 
-Simple MCP server that exposes one tool: `pdf_to_png`.
-
-It follows the same server structure as the MCP build-server example:
-- create `McpServer`
-- register a tool with `zod` input schema
-- connect over `StdioServerTransport`
+Simple MCP server that exposes one tool: `pdf_to_png`
 
 ## Requirements
 
@@ -28,7 +23,6 @@ npm install
 ```bash
 convert sample.pdf to png and save to near original file
 ```
-
 
 
 ## Run smoke test (end-to-end)
@@ -67,15 +61,17 @@ Generated files will look like:
 ```
 
 ## Example MCP client config for vs code
+* Open Command Palette
+* MCP: Open User Configuration
+* Add your server to the servers object
 ```json
-// place this in .vscode/mcp.json
 {
   "servers": {
     "pdf-converter": {
       "type": "stdio",
       "command": "node",
       "args": [
-        "${workspaceFolder}/server.js"
+        "local path to mcp-file-convertor/server.js"
       ]
     }
   }
@@ -93,7 +89,7 @@ Generated files will look like:
       "type": "stdio",
       "command": "node",
       "args": [
-        "/Users/vitaliikomenda/projects/mcp-file-convertor/server.js"
+        "local path to mcp-file-convertor/server.js"
       ]
     }
   },
