@@ -21,7 +21,7 @@ npm install
 
 ## Example prompt for llm
 ```bash
-convert sample.pdf to png and save to near original file
+convert sample.pdf to png and save near original file
 ```
 
 
